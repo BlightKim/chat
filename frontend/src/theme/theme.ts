@@ -1,7 +1,7 @@
 'use client'
 
-import {Roboto} from "next/dist/compiled/@next/font/dist/google";
 import { createTheme } from '@mui/material/styles';
+import { Roboto } from 'next/font/google';
 
 const roboto = Roboto({
     weight: ['300', '400', '500', '700'],
