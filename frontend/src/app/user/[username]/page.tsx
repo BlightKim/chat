@@ -15,7 +15,7 @@ const Page = () => {
     const [users, setUsers] = useState<User[]>([])
     const [userSelected, setUserSelected] = useState<User | null>(null)
 
-    const apiURL: string = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3333'
+    const apiURL: string = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080'
 
     const connectSocket = useCallback(async () => {
         const newSocket = io(apiURL)
