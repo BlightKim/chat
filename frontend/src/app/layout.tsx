@@ -1,24 +1,33 @@
-"use client"
-import {ThemeProvider} from "@mui/material/styles";
-import {Inter} from "next/font/google";
-import "./globals.css";
-import {Container, CssBaseline} from "@mui/material"
-import theme from "@/theme/theme";
+import {Roboto_Slab} from "next/font/google"
+import {Metadata} from "next";
+import MuiTheme from "@/theme/theme";
+import './globals.css'
 
-const inter = Inter({subsets: ["latin"]});
+const roboto = Roboto_Slab({
+    weight: ['100', '200', '300', '400', '500', '600', '700'],
+    style: ['normal'],
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-roboto-slab'
+})
 
+export const metadata: Metadata = {
+    title: 'FastChat',
+    description: 'A simple chat app',
+}
 
 export default function RootLayout({children}: {
-    children: React.ReactNode;
+    children: React.ReactNode
 }) {
     return (
         <html lang="en">
-        <body>
-        <ThemeProvider theme={theme}>
-            <CssBaseline/>
-            {children}
-        </ThemeProvider>
+        <body className={roboto.variable}>
+        <MuiTheme>
+            <main className="flex min-h-screen flex-col bg-gradient-to-br from-slate-800 to-slate-700 p-24">
+                {children}
+            </main>
+        </MuiTheme>
         </body>
         </html>
-    );
+    )
 }
