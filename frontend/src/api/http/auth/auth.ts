@@ -1,14 +1,17 @@
+import { encryptSignupData } from "@/helpers/encrypt/encrypt";
+
 import { instance } from "../index";
 import { AuthTypes } from "./auth.types";
 
 export async function signUp(name: string, username: string, password: string) {
+  const { encryptedName, encryptedUsername, encryptedPassword } = encryptSignupData(name, username, password);
   const body = {
-    name,
-    username,
-    password,
+    name: encryptedName,
+    username: encryptedUsername,
+    password: encryptedPassword,
   };
 
-  const { data } = await instance.post("member", body);
+  const { data } = await instance.post("/member", body);
   return data;
 }
 
