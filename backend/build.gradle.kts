@@ -37,6 +37,7 @@ dependencies {
 	}
 	testImplementation("org.junit.jupiter:junit-jupiter-api")
 	runtimeOnly("com.h2database:h2")
+	runtimeOnly("org.postgresql:postgresql")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 	testImplementation("com.ninja-squad:springmockk:4.0.2")
 }
