@@ -30,6 +30,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-websocket")
 	// log
 	implementation("io.github.oshai:kotlin-logging-jvm:5.1.1")
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	testImplementation("org.springframework.security:spring-security-test")
 
 	kapt("org.springframework.boot:spring-boot-configuration-processor")
 

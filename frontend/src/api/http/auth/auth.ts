@@ -8,7 +8,7 @@ export async function signUp(name: string, username: string, password: string) {
     password,
   };
 
-  const { data } = await instance.post("users/register", body);
+  const { data } = await instance.post("member", body);
   return data;
 }
 
