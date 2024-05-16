@@ -2,7 +2,7 @@ import axios, { AxiosInstance } from "axios";
 
 import { store } from "../../lib/store";
 
-const baseURL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080/";
+const baseURL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080/api/v1";
 
 export const instance: AxiosInstance = axios.create({
   baseURL,
